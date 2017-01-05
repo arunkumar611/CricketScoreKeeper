@@ -1,0 +1,299 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_settings"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="false"
+    android:orientation="vertical"
+    android:padding="4dp"
+    tools:context="com.example.android.cricketscorekeeper.cricketscorekeeper">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tutorial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Set the number of overs and hit PLAY to start" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of overs: " />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:onClick="decreaseOvers"
+                android:text="-" />
+
+            <TextView
+                android:id="@+id/numberOfOvers"
+                android:layout_width="36dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="10"
+                android:textSize="16sp" />
+
+            <Button
+                android:layout_width="48dp"
+                android:layout_height="wrap_content"
+                android:onClick="increaseOvers"
+                android:text="+" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/gameStatus"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:onClick="startOrPauseGame"
+                android:paddingLeft="24dp"
+                android:paddingRight="24dp"
+                android:text="PLAY !"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/gameStatusText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:text="Game has not started" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/score"
+                android:layout_width="140dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="0/0"
+                android:textSize="48sp" />
+
+            <TextView
+                android:layout_width="32dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="in"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/overs"
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="0.0"
+                android:textSize="36sp" />
+
+            <TextView
+                android:layout_width="64dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="Overs"
+                android:textSize="24sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/currentBallText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="noRun"
+                android:text="No Run" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="oneRun"
+                android:text="1 Run" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="twoRuns"
+                android:text="2 Runs" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="threeRuns"
+                android:text="3 Runs" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="fourRuns"
+                android:text="4 Run" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="fiveRuns"
+                android:text="5 Runs" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="sixRuns"
+                android:text="6 runs" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="wicket"
+                android:text="Wicket" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="wide"
+                android:text="Wide" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="noBall"
+                android:text="No ball" />
+
+            <Button
+                android:layout_width="85dp"
+                android:layout_height="wrap_content"
+                android:onClick="freeHit"
+                android:text="free hit" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_margin="4dp"
+                android:onClick="nextBall"
+                android:text="Next Ball" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/displayErrorForNoUserInput"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:onClick="resetGame"
+                android:text="Reset Game" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
